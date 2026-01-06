@@ -1,3 +1,45 @@
+# 🏦 Bank Document Management System (DMS)
+
+A secure Document Management System designed for banking operations with role-based access control.
+
+## 🔧 Tech Stack
+- Angular
+- .NET / Spring Boot (API)
+- SQL Server / MySQL
+- JWT Authentication
+
+## 👥 User Roles
+- Admin
+- Auditor
+- User
+
+## ✨ Features
+- Secure login & authentication
+- Document upload & versioning
+- Role-based dashboards
+- Audit logs
+- User & role management
+
+## 📸 Screenshots
+(Add screenshots here)
+
+## 🚀 How to Run
+1. Clone the repository
+2. Run `npm install`
+3. Run `ng serve`
+4. Configure backend API URL
+
+## 🔐 Security
+- JWT authentication
+- Role-based authorization
+- Audit trail logging
+
+
+
+
+
+
+
 # BankDms
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
