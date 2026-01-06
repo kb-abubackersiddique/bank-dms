@@ -1,0 +1,152 @@
+/* PAGE TITLE */
+.page-title {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 16px;
+    text-align: center;
+}
+
+/* ACTION BAR */
+.actions-bar {
+  margin-bottom: 14px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: #1e88e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* BANK TABLE */
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+.bank-table thead {
+  background: #0f4c81;
+}
+
+.bank-table th {
+  color: #ffffff;
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* BODY */
+.bank-table td {
+  padding: 11px 12px;
+  font-size: 13px;
+  color: #37474f;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* STRIPED ROWS */
+.bank-table tbody tr:nth-child(even) {
+  background: #f5f7fa;
+}
+
+/* HOVER */
+.bank-table tbody tr:hover {
+  background: #e3f2fd;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background: #0288d1;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-edit:hover {
+  background: #0277bd;
+}
+
+.btn-delete {
+  background: #d32f2f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-delete:hover {
+  background: #b71c1c;
+}
+
+/* EMPTY STATE */
+.no-data {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #9e9e9e;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.btn-view {
+  background: #338f53;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-view:hover {
+  background: #155727;
+}

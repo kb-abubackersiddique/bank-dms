@@ -1,0 +1,63 @@
+
+<div class="form-card">
+<h2 class="page-title">Create New User</h2>
+
+  <!-- Username -->
+  <div class="form-group">
+    <label>Username</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-person-fill"></i>
+      <input
+        type="text"
+        [(ngModel)]="user.username"
+        placeholder="Enter username"
+      />
+    </div>
+  </div>
+
+  <!-- Role -->
+  <div class="form-group">
+    <label>Role</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-shield-lock-fill"></i>
+      <select [(ngModel)]="user.role">
+        <option value="">Select role</option>
+        <option *ngFor="let r of roles" [value]="r">
+          {{ r }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Branch Code -->
+   <div class="form-group">
+    <label>Branch</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-building"></i>
+      <select [(ngModel)]="user.branchCode">
+        <option value="">Select branch</option>
+        <option *ngFor="let b of branches" [value]="b.code">
+          {{ b.code }} - {{ b.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="form-actions">
+    <button class="btn-primary" (click)="save()">
+      <i class="bi bi-person-plus-fill"></i> Create User
+    </button>
+    <button class="btn-secondary" routerLink="/users">
+      <i class="bi bi-x-circle"></i> Cancel
+    </button>
+  </div>
+
+  <!-- Info -->
+  <div class="info-note">
+    <i class="bi bi-info-circle-fill"></i>
+    Default password will be <b>Bank@123</b>.
+    User must change it on first login.
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+# Angular
+node_modules/
+dist/
+.angular/
+
+# Environment files
+src/environments/environment.ts
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

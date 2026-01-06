@@ -1,0 +1,50 @@
+
+<div class="form-card">
+  <h2 class="page-title">Upload Customer Document</h2>
+
+
+  <!-- Customer Select -->
+  <div class="form-group">
+    <label>Customer</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-people-fill"></i>
+      <select [(ngModel)]="model.customerId">
+        <option value="">Select Customer</option>
+        <option *ngFor="let c of customers" [value]="c.CustomerId">
+          {{ c.FullName }} - {{ c.AccountNumber }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Document Type -->
+  <div class="form-group">
+    <label>Document Type</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-file-earmark-text"></i>
+      <select [(ngModel)]="model.documentType">
+        <option value="">Select Document</option>
+        <option value="AADHAR">Aadhar</option>
+        <option value="PAN">PAN</option>
+        <option value="PASSPORT">Passport</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- File Upload -->
+  <div class="form-group">
+    <label>Upload File</label>
+    <div class="input-icon-wrapper">
+      <i class="bi bi-upload"></i>
+      <input type="file" (change)="onFileChange($event)">
+    </div>
+  </div>
+
+  <!-- Action Button -->
+  <div class="form-actions">
+    <button class="btn-upload" (click)="upload()">
+      <i class="bi bi-upload"></i> Upload
+    </button>
+  </div>
+
+</div>

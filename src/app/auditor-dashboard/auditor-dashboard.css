@@ -1,0 +1,96 @@
+/* PAGE TITLE */
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f4c81;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.page-title i {
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+/* DASHBOARD GRID */
+.row.g-4 {
+  margin-bottom: 20px;
+}
+
+/* DASHBOARD CARDS */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #607d8b;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.dashboard-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f4c81;
+}
+
+/* STATUS VARIANTS */
+.dashboard-card.approved {
+  border-left: 5px solid #2e7d32;
+}
+
+.dashboard-card.pending {
+  border-left: 5px solid #f9a825;
+}
+
+.dashboard-card.logs {
+  border-left: 5px solid #6a1b9a;
+}
+
+/* DIVIDER */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 22px 0;
+}
+
+/* VIEW LOGS BUTTON */
+.btn-warning {
+  background: #f9a825;
+  color: #1a237e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-warning:hover {
+  background: #fbc02d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dashboard-card h2 {
+    font-size: 22px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,98 @@
+/* PAGE TITLE */
+.page-title {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* BANK TABLE */
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.bank-table thead {
+  background: #f1f5f9;
+}
+
+.bank-table th {
+  text-align: left;
+  padding: 12px;
+  color: #37474f;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.bank-table td {
+  padding: 12px;
+  color: #455a64;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ROW HOVER */
+.bank-table tbody tr:hover {
+  background: #f9fbfd;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* APPROVE */
+.btn.approve {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+.btn.approve:hover {
+  background: #1b5e20;
+}
+
+/* REJECT */
+.btn.reject {
+  background: #c62828;
+  color: #ffffff;
+}
+
+.btn.reject:hover {
+  background: #8e0000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+  }
+}
+p{
+    margin: 0;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    
+}

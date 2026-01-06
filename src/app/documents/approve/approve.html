@@ -1,0 +1,31 @@
+<h2 class="page-title">Document Approval</h2>
+
+<div class="table-wrapper">
+  <table class="bank-table">
+    <thead>
+      <tr>
+        <th>Customer</th>
+        <th>File Name</th>
+        <th>Version</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let d of documents">
+        <td>{{ d.CustomerName }}</td>
+        <td>{{ d.FileName }}</td>
+        <td>{{ d.Version }}</td>
+        <td class="actions">
+          <button class="btn approve" (click)="approve(d.DocumentId)">
+            Approve
+          </button>
+          <button class="btn reject" (click)="reject(d.DocumentId)">
+            Reject
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p *ngIf="documents.length === 0">No documents pending approval.</p>

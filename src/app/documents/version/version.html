@@ -1,0 +1,44 @@
+<h2 class="page-title">Document Version History</h2>
+
+<div class="actions-bar">
+  <button class="btn-primary" (click)="loadHistory()">
+    Load History
+  </button>
+</div>
+
+<div class="table-wrapper">
+  <table class="bank-table">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>Version</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let d of documents">
+        <td>{{ d.FileName }}</td>
+        <td>{{ d.Version }}</td>
+        <td>
+          <span
+            class="status"
+            [class.approved]="d.IsApproved"
+            [class.pending]="!d.IsApproved"
+          >
+            {{ d.IsApproved ? 'Approved' : 'Pending' }}
+          </span>
+        </td>
+        <td>
+          <button class="btn-download" (click)="download(d.DocumentId)">
+            Download
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p *ngIf="documents.length === 0">click the button if nothing show then there is No version history available.</p>
+
+

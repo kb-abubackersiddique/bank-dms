@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="left">
+    <span class="title">Bank of India</span>
+  </div>
+
+  <div class="right" *ngIf="auth.isLoggedIn()">
+    <button class="logout-btn" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </button>
+  </div>
+</nav>

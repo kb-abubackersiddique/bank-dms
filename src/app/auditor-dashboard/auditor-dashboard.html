@@ -1,0 +1,56 @@
+<h2 class="page-title">
+  <i class="bi bi-shield-check"></i> Auditor Dashboard
+</h2>
+
+<div class="row g-4">
+  <div class="col-md-4">
+    <div class="dashboard-card">
+      <h5>Users</h5>
+      <h2>{{ summary.users }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="dashboard-card">
+      <h5>Customers</h5>
+      <h2>{{ summary.customers }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="dashboard-card">
+      <h5>Documents</h5>
+      <h2>{{ summary.documents }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="dashboard-card approved">
+      <h5>Approved</h5>
+      <h2>{{ summary.approved }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="dashboard-card pending">
+      <h5>Pending</h5>
+      <h2>{{ summary.pending }}</h2>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="dashboard-card logs">
+      <h5>Audit Logs</h5>
+      <h2>{{ summary.logs }}</h2>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<button
+  routerLink="/audit-logs"
+  class="btn btn-warning mt-3">
+  View Audit Logs
+</button>
+

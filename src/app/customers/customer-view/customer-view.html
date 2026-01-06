@@ -1,0 +1,84 @@
+<h2 class="page-title">
+  <i class="bi bi-person-badge-fill"></i> Customer Details
+</h2>
+
+<div class="customer-card">
+  <p>
+    <i class="bi bi-person-fill"></i>
+    <b>Name:</b> {{ customer?.FullName }}
+  </p>
+
+  <p>
+    <i class="bi bi-credit-card-2-front-fill"></i>
+    <b>Account No:</b> {{ customer?.AccountNumber }}
+  </p>
+
+<p>
+  <i class="bi bi-diagram-3-fill"></i>
+  <b>Branch:</b> {{ getBranchName(customer?.BranchCode) }}-{{ customer?.BranchCode }}
+</p>
+
+</div>
+
+<hr />
+
+<h3 class="section-title">
+  <i class="bi bi-folder-fill"></i> Documents
+</h3>
+
+<div class="table-wrapper">
+  <table class="bank-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>File</th>
+        <th>Version</th>
+        <th>Status</th>
+        <th *ngIf="role === 'MANAGER' || role === 'ADMIN'">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let d of documents">
+        <td>
+          <i class="bi bi-file-earmark-text"></i>
+          {{ d.DocumentType }}
+        </td>
+
+        <td>{{ d.FileName }}</td>
+
+        <td>v{{ d.Version }}</td>
+
+        <td>
+          <span
+            class="status approved"
+            *ngIf="d.IsApproved === true"
+          >
+            <i class="bi bi-check-circle-fill"></i> Approved
+          </span>
+
+          <span
+            class="status pending"
+            *ngIf="d.IsApproved === false"
+          >
+            <i class="bi bi-hourglass-split"></i> Pending
+          </span>
+        </td>
+
+        <td *ngIf="role === 'MANAGER' || role === 'ADMIN'">
+          <button class="btn-approve" (click)="approve(d.DocumentId)">
+            <i class="bi bi-check-lg"></i>
+          </button>
+
+          <button class="btn-reject" (click)="reject(d.DocumentId)">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="no-data" *ngIf="documents.length === 0">
+    No documents found for this customer.
+  </p>
+</div>

@@ -1,0 +1,46 @@
+<h2 class="page-title">User Management</h2>
+
+<div class="page-actions">
+  <a routerLink="/users/create" class="btn-primary">
+    + Create User
+  </a>&nbsp;
+  
+   <a routerLink="/dashboard" class="btn-secondary">
+    ← Back to Dashboard
+    
+  </a>
+  
+</div>
+<div class="spacer">
+ 
+</div>
+
+
+<table class="bank-table" *ngIf="!loading">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Role</th>
+      <th>Branch</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.Username }}</td>
+      <td>{{ u.Role }}</td>
+      <td>{{ u.BranchCode }}</td>
+      <td>
+    <button class="btn btn-danger btn-sm"
+            (click)="deleteUser(u.userId)">
+      Delete
+    </button>
+  </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="info-text" *ngIf="loading">Loading users...</p>
+<p class="empty-text" *ngIf="!loading && users.length === 0">
+  No users found.
+</p>

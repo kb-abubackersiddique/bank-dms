@@ -1,0 +1,78 @@
+/* NAVBAR CONTAINER */
+.navbar {
+  height: 64px;
+  background: linear-gradient(90deg, #003a8f, #005bb5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* LEFT SECTION */
+.navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar .logo {
+  height: 42px;
+  width: auto;
+}
+
+.navbar .title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* RIGHT SECTION */
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: #ffffff;
+  color: #003a8f;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn i {
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #e3f2fd;
+  color: #002d6d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar .title {
+    font-size: 16px;
+  }
+
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+

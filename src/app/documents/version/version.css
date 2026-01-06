@@ -1,0 +1,119 @@
+/* PAGE TITLE */
+.page-title {
+  color: #0f4c81;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* TOP ACTION BAR */
+.actions-bar {
+  margin-bottom: 15px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  padding: 8px 18px;
+  background: #1e88e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* BANK TABLE */
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.bank-table thead {
+  background: #f1f5f9;
+}
+
+.bank-table th {
+  padding: 12px;
+  text-align: left;
+  color: #37474f;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.bank-table td {
+  padding: 12px;
+  color: #455a64;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ROW HOVER */
+.bank-table tbody tr:hover {
+  background: #f9fbfd;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.approved {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.pending {
+  background: #fff8e1;
+  color: #f9a825;
+}
+
+/* DOWNLOAD BUTTON */
+.btn-download {
+  padding: 6px 14px;
+  background: #263238;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-download:hover {
+  background: #000000;
+}
+
+.btn-download:active {
+  transform: scale(0.97);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .bank-table {
+    font-size: 13px;
+  }
+}
+
+
+

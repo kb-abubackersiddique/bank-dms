@@ -1,0 +1,31 @@
+<h2 class="page-title">Audit Logs</h2>
+<button routerLink="/dashboard" class="btn-secondary">Back to Dashboard</button>
+<div class="table-wrapper">
+  <table class="bank-table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Action</th>
+        <th>Module</th>
+        <th>Date & Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let log of logs">
+        <td>{{ log.Username }}</td>
+        <td>{{ log.Action }}</td>
+        <td>{{ log.Module }}</td>
+        <td>{{ log.CreatedAt | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="empty-text" *ngIf="logs.length === 0">
+    No audit logs found.
+  </p>
+</div>
+<button
+  class="btn btn-danger mb-3"
+  (click)="clearLogs()">
+  Clear Logs
+</button>
+

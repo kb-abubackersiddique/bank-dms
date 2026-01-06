@@ -1,0 +1,44 @@
+<h2 class="page-title">Customer Management</h2>
+
+<div class="actions-bar">
+  <button class="btn-primary" (click)="add()">
+    <i class="bi bi-person-plus-fill"></i> Add Customer
+  </button>
+  
+</div>
+
+<div class="table-wrapper">
+  <table class="bank-table">
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Account No</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of customers">
+        <td>{{ c.CustomerId }}</td>
+        <td>{{ c.FullName }}</td>
+        <td>{{ c.AccountNumber }}</td>
+        <td class="actions">
+          <button class="btn-view" (click)="view(c.CustomerId)">
+            <i class="bi bi-eye-fill"></i> View
+          </button>
+          <button class="btn-edit" (click)="edit(c)">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+          <button class="btn-delete" (click)="delete(c)">
+            <i class="bi bi-trash-fill"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="no-data" *ngIf="customers.length === 0">
+    <i class="bi bi-info-circle"></i> No customers found.
+  </p>
+</div>
